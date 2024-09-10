@@ -1,0 +1,19 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    
+    <h1>Listings</h1>
+
+    <p>Il y a {{ listings|length }} merch :</p>
+
+    <a href="{% url 'listings-create' %}">Créer un nouveau groupe</a>
+
+    <ul>
+        {% for listing in listings %}
+        <li><a href="{% url 'listings-detail' listing.id %}">{{ listing.title }}</a> 
+            - <a href="{% url 'listings-update' listing.id %}">[modifier]</a>
+            - <a href="{% url 'listings-delete' listing.id %}">[supprimer]</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
