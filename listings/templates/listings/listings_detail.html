@@ -13,8 +13,8 @@
 
 <p>{{ listings.description }}</p>
 
-<a href="{% url 'listings-update' listings.id %}">Modifier ce listing</a>
-<a href="{% url 'listings-delete' listings.id %}">Supprimer ce listing</a>
+<a href="{% url 'listings-update' listings.id %}">✏️</a>
+<a href="{% url 'listings-delete' listings.id %}">✖️</a>
 <a href="{% url 'listings_list' %}">Retour à la liste des merch</a>
 
 {% endblock %}
